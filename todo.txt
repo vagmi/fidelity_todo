@@ -1,5 +1,5 @@
 Have Lunch #done
 Have Coffee #done
-Learn about OOPS #done
+Learn about OOPS
 Learn about Modules
 Learn about RubyGems

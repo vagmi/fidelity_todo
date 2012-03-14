@@ -31,6 +31,10 @@ class ItemManager
     @items[item_number.to_i-1].status = true
     dump
   end
+  def unfinish(item_number)
+    @items[item_number.to_i-1].status = false
+    dump
+  end
   def dump
     f=File.open(FILENAME,'w')
     @items.each do |i| 
