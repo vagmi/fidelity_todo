@@ -27,6 +27,9 @@ class ItemManager
       ctr +=1
     end
   end
+  def finish(item_number)
+    @items[item_number.to_i-1].status = true
+  end
 end
 
 class Item
@@ -52,4 +55,8 @@ end
 
 im = ItemManager.new
 im.load
+if(ARGV[0])
+  command = ARGV[0]
+  im.send(command.to_sym,*ARGV[1..-1])
+end
 im.display
