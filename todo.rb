@@ -29,6 +29,14 @@ class ItemManager
   end
   def finish(item_number)
     @items[item_number.to_i-1].status = true
+    dump
+  end
+  def dump
+    f=File.open(FILENAME,'w')
+    @items.each do |i| 
+      f.write i.display+"\n"
+    end
+    f.close
   end
 end
 
@@ -40,7 +48,7 @@ class Item
   end
   def display
     if @status
-      "#{@content} [done]"
+      "#{@content} #done"
     else
       @content
     end

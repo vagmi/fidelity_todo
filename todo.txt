@@ -1,4 +1,5 @@
-Should learn about objects
-Have a tea break
-Read this file
 Have Lunch #done
+Have Coffee #done
+Learn about OOPS #done
+Learn about Modules
+Learn about RubyGems
