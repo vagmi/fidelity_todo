@@ -21,7 +21,11 @@ class ItemManager
   def display
     puts "There are #{@items.count} items"
     puts "----------"
-    @items.each { |i| puts i.display }
+    ctr=1
+    @items.each do |i| 
+      puts "#{ctr} #{i.display}"
+      ctr +=1
+    end
   end
 end
 
