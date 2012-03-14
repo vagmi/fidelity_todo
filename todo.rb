@@ -35,6 +35,14 @@ class ItemManager
     @items[item_number.to_i-1].status = false
     dump
   end
+  def add(item_content)
+    @items << Item.from(item_content)
+    dump
+  end
+  def delete(item_number)
+    @items.delete_at(item_number.to_i-1)
+    dump
+  end
   def dump
     f=File.open(FILENAME,'w')
     @items.each do |i| 
